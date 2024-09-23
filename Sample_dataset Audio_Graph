@@ -1,0 +1,12 @@
+import matplotlib.pyplot as plt
+import numpy as np
+train_loss = np.array([0.4, 0.33, 0.32, 0.3, 0.29, 0.28, 0.25, 0.22, 0.2, 0.18])
+val_loss = np.array([0.42, 0.38, 0.35, 0.30, 0.28, 0.25, 0.21, 0.18, 0.16, 0.14])
+epochs = np.arange(len(train_loss))
+plt.plot(epochs, train_loss, '-', label='Training loss', color='orange')
+plt.plot(epochs, val_loss, '-', label='Validation loss', color='blue')
+plt.title('Training and validation loss')
+plt.xlabel('Epoch')
+plt.ylabel('Loss')
+plt.legend()
+plt.show()
